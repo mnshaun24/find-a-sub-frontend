@@ -1,14 +1,16 @@
-import { Routes, Route, Link } from "react-router-dom";
-import SchoolOrSub from "./pages/SchoolOrSub";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import SchoolHome from "./pages/SchoolHome";
+import SubHome from "./pages/SubHome";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hi Shaun</h1>
-      <div>
-        School or Sub
-        <SchoolOrSub />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="schoolhome" element={<SchoolHome />} />
+        <Route path="subhome" element={<SubHome />} />
+      </Routes>
     </div>
   );
 }

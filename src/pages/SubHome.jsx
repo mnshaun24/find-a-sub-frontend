@@ -1,9 +1,10 @@
 import React from 'react';
 
-function SubHome(props) {
+function SubHome() {
     return (
         <div>
-            <h1>This is subs home page</h1>
+            <h2>This is the sub home page</h2>
+            
         </div>
     );
 }

@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 
@@ -10,7 +10,7 @@ const root = createRoot(container);
 
 root.render(
   <BrowserRouter>
-    <App />
+  <App />
   </BrowserRouter>
 );
 // If you want to start measuring performance in your app, pass a function

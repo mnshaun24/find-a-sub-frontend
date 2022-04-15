@@ -1,10 +1,9 @@
 import React from 'react';
 
-function SchoolHome(props) {
+function SchoolHome() {
     return (
         <div>
-            <h1>This is school home page</h1>
-            
+            <h2>This is the school home page</h2>
         </div>
     );
 }
