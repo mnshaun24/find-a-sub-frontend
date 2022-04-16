@@ -2,10 +2,19 @@ import React from 'react';
 
 function SubHome() {
     return (
-        <div>
-            <h2>This is the sub home page</h2>
-            
-        </div>
+        <>
+
+        {/* if not logged in then login functionality will go here */}
+
+        <section>
+            <div>
+                This displays the sub's card and sub can edit each section
+            </div>
+
+
+        </section>
+        </>
+
     );
 }
 
