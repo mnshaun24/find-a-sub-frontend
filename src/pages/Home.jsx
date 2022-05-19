@@ -1,6 +1,6 @@
 import React from 'react';
-import SchoolChoice from './SchoolChoice';
-import SubChoice from './SubChoice';
+import SchoolChoice from '../components/SchoolChoice';
+import SubChoice from '../components/SubChoice';
 
 function Home() {
     return (
