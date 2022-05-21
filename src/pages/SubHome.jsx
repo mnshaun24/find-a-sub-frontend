@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import SubLoginModal from "../components/SubLoginModal";
 import SubRegisterModal from "../components/SubRegisterModal";
 
 function SubHome() {
+
+  const [showModal, setShowModal] = useState(false)
   return (
     <>
       <section>
         <div>This displays the sub's card and sub can edit each section</div>
         <div>
-          <button>Login Here</button>
-          <SubLoginModal />
+          <button onClick={() => setShowModal(true) }>Login Here</button>
+          <SubLoginModal onClose={() => setShowModal(false)} showModal={showModal} />
         </div>
         <div>
           <button>Register Here</button>

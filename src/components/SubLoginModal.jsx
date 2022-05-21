@@ -1,10 +1,17 @@
 import React from 'react';
 import SubLoginForm from './SubLoginForm';
+import { CSSTransition } from "react-transition-group";
 
-function SubLoginModal() {
+function SubLoginModal(props) {
+
     return (
-        <div className='fixed inset-0 bg-slate-100 flex items-center justify-center'>
-            <div>
+        <CSSTransition
+            in={props.showModal}
+            unmountOnExit
+            timeout={{ enter: 0, exit: 300 }}
+            >
+        <div onClick={props.onClose} className="modal-main-container">
+            <div className='modal-content-container' onClick={e => e.stopPropagation()}>
                 <div>
                     <h3>Login Form</h3>
                 </div>
@@ -12,10 +19,11 @@ function SubLoginModal() {
                     <SubLoginForm />
                 </div>
                 <div>
-                    <button>Close</button>
+                    <button onClick={props.onClose}>Close</button>
                 </div>
             </div>
         </div>
+        </CSSTransition>
     );
 }
 
