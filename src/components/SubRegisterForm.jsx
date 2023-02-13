@@ -1,11 +1,11 @@
 import React from "react";
 
-function SubLoginForm() {
+function SubRegisterForm() {
   return (
     <div className="bg-slate-100">
       <form>
         <div>
-          <label>Username</label>
+          <label>Create Username</label>
           <input
             name="userName"
             type="text"
@@ -14,7 +14,7 @@ function SubLoginForm() {
           />
         </div>
         <div>
-          <label>Password</label>
+          <label>Create Password</label>
           <input
             name="userPassword"
             type="password"
@@ -30,4 +30,4 @@ function SubLoginForm() {
   );
 }
 
-export default SubLoginForm;
+export default SubRegisterForm;

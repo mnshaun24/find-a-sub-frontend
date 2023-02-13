@@ -3,19 +3,26 @@ import SubLoginModal from "../components/SubLoginModal";
 import SubRegisterModal from "../components/SubRegisterModal";
 
 function SubHome() {
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showRegModal, setShowRegModal] = useState(false);
 
-  const [showModal, setShowModal] = useState(false)
   return (
     <>
       <section>
         <div>This displays the sub's card and sub can edit each section</div>
         <div>
-          <button onClick={() => setShowModal(true) }>Login Here</button>
-          <SubLoginModal onClose={() => setShowModal(false)} showModal={showModal} />
+          <button onClick={() => setShowLoginModal(true)}>Login Here</button>
+          <SubLoginModal
+            onClose={() => setShowLoginModal(false)}
+            showLoginModal={showLoginModal}
+          />
         </div>
         <div>
-          <button>Register Here</button>
-          <SubRegisterModal />
+          <button onClick={() => setShowRegModal(true)}>Register Here</button>
+          <SubRegisterModal
+            onClose={() => setShowRegModal(false)}
+            showRegModal={showRegModal}
+          />
         </div>
 
         <div className="subProfileScreen">
